@@ -4,4 +4,4 @@ go 1.21
 
 // replace github.com/abakum/go-taglib => ../
 
-require github.com/tetratelabs/wazero v1.8.1
+require github.com/tetratelabs/wazero v1.8.0
