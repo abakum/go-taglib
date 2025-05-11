@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"github.abakum/taglib"
+	"github.com/abakum/go-taglib"
 )
 
 func TestInvalid(t *testing.T) {
