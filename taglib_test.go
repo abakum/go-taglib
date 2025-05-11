@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"go.senan.xyz/taglib"
+	"github.abakum/taglib"
 )
 
 func TestInvalid(t *testing.T) {

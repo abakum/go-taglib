@@ -496,7 +496,7 @@ func readStrings(m *module, ptr uint32) []string {
 
 func readInts(m *module, ptr uint32, len int) []int {
 	ints := make([]int, 0, len)
-	for i := range len {
+	for i := 0; i < len; i++ {
 		i, ok := m.mod.Memory().ReadUint32Le(ptr + uint32(4*i))
 		if !ok {
 			panic("memory error")
