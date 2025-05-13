@@ -271,7 +271,11 @@ type rc struct {
 var getRuntimeOnce = sync.OnceValues(func() (rc, error) {
 	ctx := context.Background()
 
-	cacheDir := filepath.Join(os.TempDir(), "go-taglib-wasm")
+	dir := os.TempDir()
+	if ucd, err := os.UserCacheDir(); err == nil {
+		dir = ucd
+	}
+	cacheDir := filepath.Join(dir, "go-taglib-wasm")
 	compilationCache, err := wazero.NewCompilationCacheWithDir(cacheDir)
 	if err != nil {
 		return rc{}, err
